@@ -1,9 +1,9 @@
-import tensorflow.keras.backend as K
-from tensorflow.keras.layers import *
-from tensorflow.keras.layers import ZeroPadding2D, MaxPooling2D
-from tensorflow.keras.layers import Lambda
-from tensorflow.keras.models import Model
-from tensorflow.keras.callbacks import Callback
+import tensorflow.python.keras.backend as K
+from tensorflow.python.keras.layers import *
+from tensorflow.python.keras.layers import ZeroPadding2D, MaxPooling2D
+from tensorflow.python.keras.layers import Lambda
+from tensorflow.python.keras.models import Model
+from tensorflow.python.keras.callbacks import Callback
 import numpy as np
 import os
 import tensorflow as tf
@@ -99,14 +99,14 @@ if __name__ == '__main__':
     x = MaxPooling2D(pool_size=(2,2),strides=(2,2))(x)
 
     x = Conv2D(256,(3,3),strides=(1,1),padding="same")(x)
-    x = BatchNormalization()(x)
+    x = tf.keras.layers.BatchNormalization()(x)
     x = Activation('relu')(x)
 
     x = Conv2D(256,(3,3),strides=(1,1),padding="same")(x)
     x = MaxPooling2D(pool_size=(2,2),strides=(2,2))(x)
 
     x = Conv2D(512,(3,3),strides=(1,1),padding="same")(x)
-    x = BatchNormalization()(x)
+    x = tf.keras.layers.BatchNormalization()(x)
     x = Activation('relu')(x)
 
     x = Conv2D(512,(3,3),strides=(1,1),padding="same")(x)
