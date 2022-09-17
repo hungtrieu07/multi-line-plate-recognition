@@ -155,7 +155,7 @@ if __name__ == '__main__':
     model.summary()
     history = LossHistory()
 
-    data,label = gen_data_label_data()
+    data,label = gen_data_label_data(True)
 
     input_length = np.zeros([len(data),1])
     label_length = np.zeros([len(data),1])
