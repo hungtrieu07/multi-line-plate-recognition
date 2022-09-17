@@ -78,9 +78,9 @@ def ctc_lamba_func(args):
 
 
 def get_session():
-    config = tf.ConfigProto()
+    config = tf.compat.v1.ConfigProto()
     config.gpu_options.allow_growth = False
-    return tf.Session(config=config)
+    return tf.compat.v1.Session(config=config)
 
 if __name__ == '__main__':
 
