@@ -1,4 +1,4 @@
-import tensorflow.keras.backend as K
+from tensorflow.compat.v1.keras import backend as K
 from tensorflow.keras.layers import *
 from tensorflow.keras.layers import ZeroPadding2D, MaxPooling2D
 from tensorflow.keras.layers import Lambda
